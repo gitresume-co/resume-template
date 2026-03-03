@@ -1,0 +1,77 @@
+# yaml-language-server: $schema=https://www.gitresume.co/schema/resume.schema.json
+# GitResume — Resume as Code
+# Edit this file and push to build your resume automatically.
+# Schema: https://www.gitresume.co/schema/resume.schema.json
+# Docs:   https://www.gitresume.co/docs
+
+personalInfo:
+  name: Your Name
+  title: Your Job Title
+  email: you@example.com
+  # phone: "+1-555-000-0000"
+  location: City, Country
+  links:
+    - label: GitHub
+      url: https://github.com/yourusername
+    - label: LinkedIn
+      url: https://linkedin.com/in/yourusername
+
+# Sections are rendered in the order listed below.
+# Reorder them freely to match your needs.
+sections:
+  - type: summary
+    content: >-
+      A brief professional summary. Markdown is supported:
+      **bold**, *italic*, `code`, and [links](https://example.com).
+
+  - type: experience
+    items:
+      - position: Your Role
+        organization: Company Name    # company, community, or project
+        location: City, Country
+        startDate: "2023-01"
+        # endDate: "2024-12"          # omit for current position
+        description: |
+          - Describe your key achievements and responsibilities
+          - Use **Markdown** for formatting
+
+  - type: education
+    items:
+      - institution: University Name
+        degree: B.S. in Computer Science
+        location: City, Country
+        startDate: "2018-09"
+        endDate: "2022-06"
+        description: Relevant coursework, honors, or activities.
+
+  - type: skills
+    items:
+      - category: Languages & Frameworks
+        items: [JavaScript, TypeScript, Python, React, Node.js]
+      - category: Tools & Infrastructure
+        items: [Git, Docker, AWS, PostgreSQL]
+
+  # ── Optional sections — uncomment and customize as needed ──
+
+  # Structured items with title, subtitle, url, dates, and description:
+  # - type: generic
+  #   title: Projects
+  #   items:
+  #     - title: Project Name
+  #       url: https://github.com/you/project
+  #       startDate: "2023-06"
+  #       description: A brief description of the project.
+
+  # - type: generic
+  #   title: Certifications
+  #   items:
+  #     - title: AWS Solutions Architect
+  #       subtitle: Amazon Web Services
+  #       startDate: "2023-05"
+
+  # Simple bullet list (each item supports Markdown):
+  # - type: list
+  #   title: Languages
+  #   items:
+  #     - "English — Native"
+  #     - "Mandarin — Fluent"
