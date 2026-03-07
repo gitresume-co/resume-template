@@ -8,13 +8,13 @@ Powered by [GitResume](https://www.gitresume.co) — Resume as Code.
 ## Quick Start
 
 1. Click <kbd>Use this template</kbd> on GitHub to create your own repo
-2. Sign in at [gitresume.co](https://gitresume.co) and create a project linked to your new repo
-3. Edit `resume.yaml` with your information
+2. Create your `resume.yaml` using the [Resume Builder](https://gitresume.co/builder) or by copying `resume.example.yaml`
+3. Sign in at [gitresume.co](https://gitresume.co) and create a project linked to your repo
 4. Commit and push — GitResume automatically builds your PDF and web resume
 
 ## Editor Setup
 
-For autocompletion and validation while editing `resume.yaml`, install the [YAML extension (Red Hat)](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) in VS Code. The schema comment at the top of `resume.yaml` enables it automatically.
+For autocompletion and validation while editing `resume.yaml`, install the [YAML extension (Red Hat)](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) in VS Code. The schema comment at the top of the file enables it automatically. See `resume.example.yaml` for reference.
 
 ## Resources
 
