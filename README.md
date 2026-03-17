@@ -1,6 +1,6 @@
 # My Resume
 
-Powered by [GitResume](https://www.gitresume.co) — Resume as Code.
+Powered by [GitResume](https://gitresume.co) — Resume as Code.
 
 > **Live Preview:** See what this template looks like when built by GitResume:
 > [gitresume.co/@gitresume-co/resume-template](https://gitresume.co/@gitresume-co/resume-template)
@@ -18,5 +18,5 @@ For autocompletion and validation while editing `resume.yaml`, install the [YAML
 
 ## Resources
 
-- [Getting Started](https://www.gitresume.co/docs) — Full setup guide
-- [YAML Schema Reference](https://www.gitresume.co/docs/schema) — All available fields
+- [Getting Started](https://gitresume.co/docs) — Full setup guide
+- [YAML Schema Reference](https://gitresume.co/docs/schema) — All available fields

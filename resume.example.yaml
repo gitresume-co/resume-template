@@ -1,8 +1,8 @@
-# yaml-language-server: $schema=https://www.gitresume.co/schema/resume.schema.json
+# yaml-language-server: $schema=https://gitresume.co/schema/resume.schema.json
 # GitResume — Resume as Code
 # Edit this file and push to build your resume automatically.
-# Schema: https://www.gitresume.co/schema/resume.schema.json
-# Docs:   https://www.gitresume.co/docs
+# Schema: https://gitresume.co/schema/resume.schema.json
+# Docs:   https://gitresume.co/docs
 
 personalInfo:
   name: Your Name
