@@ -16,19 +16,21 @@ This is a [GitResume](https://gitresume.co) repo — a **Resume-as-Code** projec
 - Don't add fields the schema doesn't define.
 - Common pitfalls: dates use `YYYY-MM` (e.g. `2024-01`), not `January 2024` or `2024/01`. Omit `endDate` for ongoing roles.
 
-## Branching strategy (tailored resumes)
+## Branching strategy
 
-GitResume builds every branch the webhook sees, so branches are useful for iterating on tailored variants without disturbing your canonical resume:
+GitResume builds every branch the webhook sees, so the user can preview each version before it goes live. By default, branch from `main` before editing the YAML — this keeps the published resume on the public URL safe from in-progress edits. Skip the branch only if the user explicitly asks to commit straight to `main`.
 
-- `main` (or your default branch) — canonical resume. This is what's served publicly at `gitresume.co/@<owner>/<repo>`.
-- `company-<name>` or `role-<focus>` — a tailored variant for a specific application. Preview the build from the GitResume dashboard before merging.
+- `main` (or your default branch) — canonical resume, served publicly at `gitresume.co/@<owner>/<repo>`.
+- Suggested branch names:
+  - `update-<topic>` for new content (e.g. `update-payment-service-migration`)
+  - `company-<name>` or `role-<focus>` for tailored variants for specific applications
 
-When asked to tailor for a specific role:
+For most edits:
 
 1. Branch from `main`.
-2. Edit the resume YAML (reorder sections, adjust `personalInfo.title`, etc.).
-3. Commit and push. Review the branch build in the GitResume dashboard.
-4. Merge to `main` when the user is happy — only the default branch is published to the public URL.
+2. Edit the resume YAML.
+3. Commit and push. The user can preview the branch build in the GitResume dashboard.
+4. Merge into `main` once the user confirms (for canonical updates), or leave the branch un-merged (for tailored variants kept separate from the public resume).
 
 > Branch-specific public/shareable URLs are not guaranteed by this template. Check the GitResume dashboard for the current sharing options before promising a URL to anyone.
 
