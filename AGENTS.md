@@ -20,6 +20,8 @@ This is a [GitResume](https://gitresume.co) repo — a **Resume-as-Code** projec
 
 GitResume builds every branch the webhook sees, so the user can preview each version before it goes live. By default, branch from `main` before editing the YAML — this keeps the published resume on the public URL safe from in-progress edits. Skip the branch only if the user explicitly asks to commit straight to `main`.
 
+**Exception — first resume:** if the repo has no resume YAML yet, just create it and commit straight to `main`. There's no published resume to protect, so branching only adds friction. The branch-first default applies to *edits* of an already-published resume, not the initial seed.
+
 - `main` (or your default branch) — canonical resume, served publicly at `gitresume.co/@<owner>/<repo>`.
 - Suggested branch names:
   - `update-<topic>` for new content (e.g. `update-payment-service-migration`)
