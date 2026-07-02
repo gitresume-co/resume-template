@@ -46,7 +46,7 @@ Pick the repo you just created from the template. Use the search box if you have
 
 Click <kbd>Create Project</kbd>.
 
-> Using a filename other than `gitresume.yaml` (e.g. `cv.yaml`)? Create the project with the default first, then go to **Project Settings → Resume Path** and update it.
+> Using a filename other than `gitresume.yaml` (e.g. `cv.yaml`)? Create the project with the default first, then update **Resume Path** in the project's **Settings** tab.
 
 ### Step 3: Push your resume
 
