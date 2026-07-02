@@ -6,8 +6,8 @@ This is a [GitResume](https://gitresume.co) repo — a **Resume-as-Code** projec
 
 ## Source of truth
 
-- A single YAML file defines the resume. The default path is `resume.yaml`, but each GitResume project can point at a custom path (e.g. `cv.yaml`, `resumes/main.yaml`) configured in the dashboard. Check the existing file(s) in this repo to confirm which path is in use, and edit that one — don't create a parallel resume file.
-- **The schema is the source of truth for YAML structure and field definitions**: <https://gitresume.co/schema/resume.schema.json>. When you need to know what section types exist, whether a field is required, date formats, etc., read the schema directly — don't rely on memory. `resume.example.yaml` is a complete worked example you can use as a quick reference.
+- A single YAML file defines the resume. The default path is `gitresume.yaml`, but each GitResume project can point at a custom path (e.g. `cv.yaml`, `resumes/main.yaml`) configured in the dashboard. Check the existing file(s) in this repo to confirm which path is in use, and edit that one — don't create a parallel resume file.
+- **The schema is the source of truth for YAML structure and field definitions**: <https://gitresume.co/schema/resume.schema.json>. When you need to know what section types exist, whether a field is required, date formats, etc., read the schema directly — don't rely on memory. `gitresume.example.yaml` is a complete worked example you can use as a quick reference.
 
 ## Editing conventions
 

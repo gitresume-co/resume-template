@@ -8,7 +8,7 @@ Powered by [GitResume](https://gitresume.co) — Resume as Code.
 ## Quick Start
 
 1. Click <kbd>Use this template</kbd> on GitHub to create your own repo
-2. Create your `resume.yaml` using the [Resume Builder](https://gitresume.co/builder) or by copying `resume.example.yaml`
+2. Create your `gitresume.yaml` using the [Resume Builder](https://gitresume.co/builder) or by copying `gitresume.example.yaml`
 3. [Connect your repo to GitResume](#connect-to-gitresume)
 4. Commit and push — GitResume automatically builds your PDF and web resume
 
@@ -46,7 +46,7 @@ Pick the repo you just created from the template. Use the search box if you have
 
 Click <kbd>Create Project</kbd>.
 
-> Using a filename other than `resume.yaml` (e.g. `cv.yaml`)? Create the project with the default first, then go to **Project Settings → Resume Path** and update it.
+> Using a filename other than `gitresume.yaml` (e.g. `cv.yaml`)? Create the project with the default first, then go to **Project Settings → Resume Path** and update it.
 
 ### Step 3: Push your resume
 
@@ -54,10 +54,10 @@ Back in your local clone:
 
 ```bash
 # If you haven't already, copy the example as a starting point
-cp resume.example.yaml resume.yaml
+cp gitresume.example.yaml gitresume.yaml
 
-# Edit resume.yaml, then:
-git add resume.yaml
+# Edit gitresume.yaml, then:
+git add gitresume.yaml
 git commit -m "add my resume"
 git push
 ```
@@ -75,7 +75,7 @@ Push to any **non-default branch** to build a tailored variant without touching 
 
 ```bash
 git checkout -b company-acme
-# edit resume.yaml to emphasise relevant experience
+# edit gitresume.yaml to emphasise relevant experience
 git commit -am "tailor for Acme"
 git push -u origin company-acme
 ```
@@ -84,7 +84,7 @@ Branch builds appear in your project's build list alongside the main branch's bu
 
 ## Editor Setup
 
-For autocompletion and validation while editing `resume.yaml`, install the [YAML extension (Red Hat)](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) in VS Code. The schema comment at the top of the file enables it automatically. See `resume.example.yaml` for reference.
+For autocompletion and validation while editing `gitresume.yaml`, install the [YAML extension (Red Hat)](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) in VS Code. The schema comment at the top of the file enables it automatically. See `gitresume.example.yaml` for reference.
 
 ## Resources
 
