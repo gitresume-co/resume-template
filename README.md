@@ -8,7 +8,7 @@ Powered by [GitResume](https://gitresume.co) — Resume as Code.
 ## Quick Start
 
 1. Click <kbd>Use this template</kbd> on GitHub to create your own repo
-2. Create your `gitresume.yaml` using the [Resume Builder](https://gitresume.co/builder) or by copying `gitresume.example.yaml`
+2. Create your `gitresume.yaml` using the [Resume Builder](https://gitresume.co/builder) or by copying `example.gitresume.yaml`
 3. [Connect your repo to GitResume](#connect-to-gitresume)
 4. Commit and push — GitResume automatically builds your PDF and web resume
 
@@ -54,7 +54,7 @@ Back in your local clone:
 
 ```bash
 # If you haven't already, copy the example as a starting point
-cp gitresume.example.yaml gitresume.yaml
+cp example.gitresume.yaml gitresume.yaml
 
 # Edit gitresume.yaml, then:
 git add gitresume.yaml
@@ -84,7 +84,7 @@ Branch builds appear in your project's build list alongside the main branch's bu
 
 ## Editor Setup
 
-For autocompletion and validation while editing `gitresume.yaml`, install the [YAML extension (Red Hat)](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) in VS Code. The schema comment at the top of the file enables it automatically. See `gitresume.example.yaml` for reference.
+Autocompletion and validation work out of the box: GitResume is listed in [SchemaStore](https://www.schemastore.org), so editors recognize `gitresume.yaml` (and `*.gitresume.yaml`) by filename alone. In VS Code, install the [YAML extension (Red Hat)](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml); JetBrains IDEs and Neovim (with SchemaStore support) work without extra setup. See `example.gitresume.yaml` for reference.
 
 ## Resources
 
