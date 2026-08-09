@@ -16,6 +16,20 @@ This is a [GitResume](https://gitresume.co) repo — a **Resume-as-Code** projec
 - Don't add fields the schema doesn't define.
 - Common pitfalls: dates use `YYYY-MM` (e.g. `2024-01`), not `January 2024` or `2024/01`. Omit `endDate` for ongoing roles.
 
+## GitResume's MCP server (optional)
+
+GitResume runs a remote MCP server at `https://gitresume.co/mcp`. If it's connected, prefer it over sending the user to the dashboard. Setup: `claude mcp add --transport http gitresume https://gitresume.co/mcp`, or see <https://gitresume.co/docs/ai>.
+
+**GitResume's MCP server cannot write resume content.** Every content change goes through this repo and Git, exactly as it would without the server. What it does:
+
+- `validate_resume` — check the YAML against the schema *before* you commit. A failed build costs the user a round trip; this costs nothing.
+- `get_build_log`, `list_builds` — report how the build went after pushing.
+- `get_artifact_links`, `list_projects` — the resume's public URL. Quote it exactly; never assemble one from the repository name, that isn't how the URL is built.
+- `trigger_rebuild` — build the current commit without waiting for a push.
+- `publish_resume` / `unpublish_resume` — change who can see the resume at its public URL.
+
+If the server isn't connected, work as described below and leave build checking to the user.
+
 ## Branching strategy
 
 GitResume builds every branch the webhook sees, so the user can preview each version before it goes live. By default, branch from `main` before editing the YAML — this keeps the published resume on the public URL safe from in-progress edits. Skip the branch only if the user explicitly asks to commit straight to `main`.
@@ -31,7 +45,7 @@ For most edits:
 
 1. Branch from `main`.
 2. Edit the resume YAML.
-3. Commit and push. The user can preview the branch build in the GitResume dashboard.
+3. Commit and push. Check the build with `get_build_log` if the MCP server is connected, otherwise the user can preview the branch build in the GitResume dashboard.
 4. Merge into `main` once the user confirms (for canonical updates), or leave the branch un-merged (for tailored variants kept separate from the public resume).
 
 > Branch-specific public/shareable URLs are not guaranteed by this template. Check the GitResume dashboard for the current sharing options before promising a URL to anyone.
