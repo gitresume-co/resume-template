@@ -86,7 +86,25 @@ Branch builds appear in your project's build list alongside the main branch's bu
 
 Autocompletion and validation work out of the box: GitResume is listed in [SchemaStore](https://www.schemastore.org), so editors recognize `gitresume.yaml` (and `*.gitresume.yaml`) by filename alone. In VS Code, install the [YAML extension (Red Hat)](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml); JetBrains IDEs and Neovim (with SchemaStore support) work without extra setup. See `example.gitresume.yaml` for reference.
 
+## Use with an AI Agent
+
+Any AI agent that speaks MCP (Claude, Claude Code, VS Code, and others) can maintain this resume for you. The work splits in two:
+
+- **The Git side happens in this repo.** The agent edits `gitresume.yaml`, commits, and pushes. `AGENTS.md` in this repo tells it how: branch first, validate against the schema, quote the public URL exactly.
+- **The GitResume side happens over MCP.** Connect GitResume's server and the same conversation can also check whether the build passed, validate the YAML before you push, fetch the PDF link, and publish.
+
+Claude Code:
+
+```bash
+claude mcp add --transport http gitresume https://gitresume.co/mcp
+```
+
+Claude (web and desktop): **Settings → Connectors → Add custom connector**, paste `https://gitresume.co/mcp` as the server URL, and leave the two OAuth fields empty. Your browser opens to approve the permissions on first use, and read-only access is a valid choice.
+
+The MCP server never writes resume content. Every change still goes through this repo and Git, so your history stays yours. Full setup and the tool list: [AI Integration](https://gitresume.co/docs/ai).
+
 ## Resources
 
 - [Getting Started](https://gitresume.co/docs) — Full setup guide
 - [YAML Schema Reference](https://gitresume.co/docs/schema) — All available fields
+- [AI Integration](https://gitresume.co/docs/ai) — Connect Claude, Claude Code, or any MCP client
