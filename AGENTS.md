@@ -24,6 +24,8 @@ GitResume runs a remote MCP server at `https://gitresume.co/mcp`. If it's connec
 
 - `validate_resume` — check the YAML against the schema *before* you commit. A failed build costs the user a round trip; this costs nothing.
 - `get_build_log`, `list_builds` — report how the build went after pushing.
+- `get_resume_check` — layout and formatting reminders from the latest build (a lone last word, bullets over three lines, a heading stranded at the bottom of a page, a nearly empty last page, mixed date formats, inconsistent closing periods), each with the YAML line range to edit.
+- `set_layout_density` — change font size, line spacing, margins and gaps. Layout reminders can often be fixed this way without rewriting content. Pass `level` (`relaxed`, `standard`, `compact`) for a general request, or `density` with only the values to change; `compact` also shrinks the font, so to fit a nearly empty last page without smaller text, lower just the margins or gaps. It applies from the next build: call `trigger_rebuild`, then `get_resume_check` again.
 - `get_artifact_links`, `list_projects` — the resume's public URL. Quote it exactly; never assemble one from the repository name, that isn't how the URL is built.
 - `trigger_rebuild` — build the current commit without waiting for a push.
 - `publish_resume` / `unpublish_resume` — change who can see the resume at its public URL.
