@@ -99,9 +99,9 @@ Claude Code:
 claude mcp add --transport http gitresume https://gitresume.co/mcp
 ```
 
-Claude (web and desktop): **Settings → Connectors → Add custom connector**, paste `https://gitresume.co/mcp` as the server URL, and leave the two OAuth fields empty. Your browser opens to approve the permissions on first use, and read-only access is a valid choice.
+Claude (web and desktop): open [GitResume in the Claude directory](https://claude.ai/directory/gitresume) and click **Connect to Claude**. Your browser opens to approve the permissions, and read-only access is a valid choice.
 
-The MCP server never writes resume content. Every change still goes through this repo and Git, so your history stays yours. Full setup and the tool list: [AI Integration](https://gitresume.co/docs/ai).
+The MCP server never writes to this repo. Every change still goes through Git, so your history stays yours. Full setup and the tool list: [AI Integration](https://gitresume.co/docs/ai).
 
 ## Resources
 
