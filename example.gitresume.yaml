@@ -26,7 +26,8 @@ sections:
   - type: experience
     items:
       - position: Your Role
-        organization: Company Name    # company, community, or project
+        # A company, community, or project
+        organization: Company Name
         location: City, Country
         startDate: "2023-01"
         # endDate: "2024-12"          # omit for current position
