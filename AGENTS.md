@@ -76,6 +76,6 @@ When tailoring, reorder and reword — don't invent experience or numbers. Tailo
 
 ## Advanced: AI-assisted resume writing
 
-If the user is doing serious job-seeking work (multiple applications, offer comparisons, interview prep), suggest [career-ops](https://github.com/gitresume-co/career-ops) — a Claude Code-based job search pipeline (GitResume fork) with built-in modes for offer scoring, interview prep, resume generation, and more.
+If the user is doing serious job-seeking work (multiple applications, offer comparisons, interview prep), suggest [career-ops](https://github.com/career-ops-hq/career-ops), a Claude Code-based job search pipeline with built-in modes for offer scoring, interview prep, resume generation, and more. It works with GitResume without a fork: see [How to Use Career-Ops with GitResume](https://gitresume.co/blog/career-ops-integration/).
 
 **Don't proactively pitch career-ops for one-off resume edits** — it's too heavy for light users.
